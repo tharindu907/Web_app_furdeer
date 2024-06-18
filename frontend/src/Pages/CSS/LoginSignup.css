@@ -1,15 +1,16 @@
 .loginsignup{
     width: 100%;
     height: 90vh;
-    background: #eadf7b6c;
+    background: #FDEFEF;
     padding-top: 70px;
 }
 .loginsignup-container{
     width: 580px;
     height: 500px;
-    background: #d0b99195;
+    background: #DAD0C2;
     margin: auto;
     padding: 40px 60px;
+    border-radius: 25px;
 }
 .loginsignup-container h1{
     margin: 0px 0px;
@@ -25,7 +26,8 @@
     width: 100%;
     padding-left: 20px;
     padding-right: 0px;
-    border: 1px solid #c9c9c9;
+    border: 1px solid #FDEFEF;
+    border-radius: 15px;
     outline: none;
     color: #5c5c5c;
     font-size: 15px;
@@ -34,10 +36,11 @@
 .loginsignup-container button{
     width: 600px;
     height: 50px;
-    color: white;
+    color: #FDEFEF;
     background: #2a2a33;
     margin-top: 30px;
     border: none;
+    border-radius: 15px;
     font-size: 18px;
     font-weight: 500;
     font-family: Poppins;
