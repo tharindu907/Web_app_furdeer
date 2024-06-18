@@ -1,52 +1,71 @@
-.add-product{
+.add-product {
     box-sizing: border-box;
     width: 100%;
-    max-width: 800px;
     padding: 30px 50px;
     margin: 20px 30px;
     border-radius: 10px;
     background: #AFD3E2;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Adding gap between items */
 }
-.addproduct-itemfield{
+.add-product h1{
+    align-self: center;
+}
+
+.addproduct-itemfield {
     width: 100%;
     color: black;
     font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Adding gap between label and input */
 }
-.addproduct-itemfield input{
+
+.addproduct-itemfield input,
+.addproduct-itemfield select {
     box-sizing: border-box;
     width: 100%;
-    height: 50px;
+    height: 40px;
     border-radius: 8px;
     padding-left: 15px;
     border: 1px solid #F9F5EB;
     outline: none;
     color: #7b7b7b;
-    font-family: Poppins;
+    font-family: Poppins, sans-serif;
     font-size: 14px;
 }
-.addproduct-price{
+
+.addproduct-price {
     display: flex;
-    gap: 40px;
+    gap: 20px; /* Adding gap between price inputs */
 }
-.add-product-selector{
+
+.addproduct-price > .addproduct-itemfield {
+    flex: 1; /* Making price fields take equal space */
+}
+
+.add-product-selector {
     padding: 10px;
-    width: 100px;
+    width: 100%; /* Full width inside its container */
     height: 50px;
     font-size: 14px;
     color: #7b7b7b;
     border: 1px solid #F9F5EB;
     border-radius: 8px;
 }
-.addproduct-thumnail-img{
+
+.addproduct-thumnail-img {
     height: 120px;
     width: 120px;
     border-radius: 15px;
     object-fit: contain;
     margin: 10px 0px;
 }
-.addproduct-btn{
+
+.addproduct-btn {
     margin-top: 20px;
-    width: 160px;
+    width: 100%; /* Full width for the button */
     height: 50px;
     border-radius: 8px;
     background: #1C3879;
@@ -56,10 +75,16 @@
     font-size: 16px;
     font-weight: 500;
 }
-@media(max-width:800px){
-    .add-product{
+
+@media (max-width: 800px) {
+    .add-product {
         width: auto;
         padding: 30px;
         margin: 20px;
+    }
+
+    .addproduct-price {
+        flex-direction: column; /* Stack price fields vertically on smaller screens */
+        gap: 10px;
     }
 }
