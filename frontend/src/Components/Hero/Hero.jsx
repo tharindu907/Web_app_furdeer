@@ -1,7 +1,5 @@
 import React from 'react';
 import './Hero.css'
-/*import hand_icon from '../Assets/hand_icon.png'*/
-import arrow_icon from '../Assets/arrow.png'
 import hero_image from '../Assets/hero_1.jpg'
 
 const Hero = () => {
@@ -12,14 +10,12 @@ const Hero = () => {
         <div>
             <div className="hand-hand-icon">
                 <p>Discover</p>
-                {/*<img src={hand_icon} alt="" />*/}
             </div>
             <p>the Latest Trends</p>
             <p>for Everyone</p>
         </div>
         <div className="hero-latest-btn">
             <div>New Arrivals</div>
-            <img src={arrow_icon} alt="" />
         </div>
         <div>
             <h3>Enjoy Free Shipping on Orders Over Rs 7500</h3>

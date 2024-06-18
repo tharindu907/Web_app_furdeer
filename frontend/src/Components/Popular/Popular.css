@@ -33,7 +33,7 @@
     }
     .popular hr{
         width: 160px;
-        height: 4px;
+        height: 1px;
     }
     .popular-item{
         gap: 20px;
@@ -49,7 +49,7 @@
     }
     .popular hr{
         width: 120px;
-        height: 3px;
+        height: 1px;
     }
     .popular-item{
         gap: 15px;
@@ -65,7 +65,7 @@
     }
     .popular hr{
         width: 100px;
-        height: 3px;
+        height: 1px;
     }
     .popular-item{
         gap: 12px;

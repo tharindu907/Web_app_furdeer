@@ -41,7 +41,7 @@
     justify-content: center;
     align-items: center;
     gap: 15px;
-    width: 310px;
+    width: 280px;
     height: 70px;
     border-radius: 25px;
     margin-top: 30px;
@@ -72,7 +72,7 @@
     }
     .hero-latest-btn{
         gap: 10px;
-        width: 280px;
+        width: 250px;
         height: 65px;
         border-radius: 20px;
         margin-top: 20px;
@@ -101,7 +101,7 @@
     }
     .hero-latest-btn{
         gap: 10px;
-        width: 250px;
+        width: 230px;
         height: 65px;
         border-radius: 20px;
         margin-top: 20px;
@@ -130,14 +130,11 @@
     }
     .hero-latest-btn{
         gap: 7px;
-        width: 150px;
+        width: 130px;
         height: 50px;
         border-radius: 20px;
         margin-top: 20px;
         font-size: 12px;
-    }
-    .hero-latest-btn img{
-        transform: scale(0.7);
     }
     .hero-right img{
         width: 400px;
@@ -171,8 +168,5 @@
         border-radius: 18px;
         margin-top: 20px;
         font-size: 15px;
-    }
-    .hero-latest-btn img{
-        transform: scale(0.8);
     }
 }
