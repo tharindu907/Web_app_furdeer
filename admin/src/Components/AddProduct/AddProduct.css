@@ -4,10 +4,10 @@
     padding: 30px 50px;
     margin: 20px 30px;
     border-radius: 10px;
-    background: #AFD3E2;
+    background: #CDE8E5;
     display: flex;
     flex-direction: column;
-    gap: 15px; /* Adding gap between items */
+    gap: 15px; 
 }
 .add-product h1{
     align-self: center;
@@ -19,7 +19,7 @@
     font-size: 16px;
     display: flex;
     flex-direction: column;
-    gap: 10px; /* Adding gap between label and input */
+    gap: 10px;
 }
 
 .addproduct-itemfield input,
@@ -38,16 +38,16 @@
 
 .addproduct-price {
     display: flex;
-    gap: 20px; /* Adding gap between price inputs */
+    gap: 20px;
 }
 
 .addproduct-price > .addproduct-itemfield {
-    flex: 1; /* Making price fields take equal space */
+    flex: 1;
 }
 
 .add-product-selector {
     padding: 10px;
-    width: 100%; /* Full width inside its container */
+    width: 100%;
     height: 50px;
     font-size: 14px;
     color: #7b7b7b;
@@ -65,10 +65,10 @@
 
 .addproduct-btn {
     margin-top: 20px;
-    width: 100%; /* Full width for the button */
+    width: 100%;
     height: 50px;
     border-radius: 8px;
-    background: #1C3879;
+    background: #153448;
     border: none;
     cursor: pointer;
     color: white;
@@ -84,7 +84,7 @@
     }
 
     .addproduct-price {
-        flex-direction: column; /* Stack price fields vertically on smaller screens */
+        flex-direction: column; 
         gap: 10px;
     }
 }

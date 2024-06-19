@@ -1,8 +1,10 @@
 import React from 'react'
 import './Sidebar.css'
 import { Link } from 'react-router-dom'
-import add_product_icon from '../../assets/Product_Cart.svg'
-import list_product_icon from '../../assets/Product_list_icon.svg'
+import add_product_icon from '../../assets/add_product_icon.svg'
+import list_product_icon from '../../assets/all_product_icon.svg'
+import chart_icon from '../../assets/chart_icon.svg'
+import footer_logo from '../../assets/logo.svg'
 
 const Sidebar = () => {
   return (
@@ -19,6 +21,13 @@ const Sidebar = () => {
             <p>Product List</p>
         </div>
       </Link>
+      <div className="sidebar-item">
+          <img src={chart_icon} alt="" />
+          <p>Charts</p>
+        </div>
+      <div className="footer">
+          <img src={footer_logo} alt="" />
+      </div>
     </div>
   )
 }

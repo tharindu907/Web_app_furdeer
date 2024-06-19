@@ -119,6 +119,7 @@ app.post('/removeproduct',async (req,res)=>{
 })
 
 // Creating API for getting all products
+
 app.get('/allproducts',async (req,res)=>{
     let products = await Product.find({});
     console.log("All Products Fetched");
@@ -126,6 +127,7 @@ app.get('/allproducts',async (req,res)=>{
 })
 
 // Schema for Creating User model
+
 const Users = mongoose.model('Users',{
     name:{
         type:String,
@@ -147,6 +149,7 @@ const Users = mongoose.model('Users',{
 })
 
 // Creating Endpoint for Registering the User
+
 app.post('/signup',async(req,res)=>{
 
     let check = await Users.findOne({email:req.body.email});
@@ -178,6 +181,7 @@ app.post('/signup',async(req,res)=>{
 })
 
 // Creating Endpoint for User Login
+
 app.post('/login',async (req,res)=>{
     let user = await Users.findOne({email:req.body.email});
     if (user) {
@@ -201,6 +205,7 @@ app.post('/login',async (req,res)=>{
 })
 
 // Creating endpoint for newcollection data
+
 app.get('/newcollections',async (req,res)=>{
     let products = await Product.find({});
     let newcollection = products.slice(1).slice(-8);
@@ -208,7 +213,8 @@ app.get('/newcollections',async (req,res)=>{
     res.send(newcollection);
 })
 
-// Creating endpoint for popular in women section
+// Creating endpoint for popular section
+
 app.get('/popularinwomen',async (req,res)=>{
     let products = await Product.find({category:"womens"});
     let popular_in_women = products.slice(0,4);
@@ -217,6 +223,7 @@ app.get('/popularinwomen',async (req,res)=>{
 })
 
 // creating middleware to fetch user
+
     const fetchUser = async (req,res,next)=>{
         const token = req.header('auth-token');
         if (!token){
@@ -234,6 +241,7 @@ app.get('/popularinwomen',async (req,res)=>{
     }
 
 //creating endpoint for adding prodcuts in cartdata
+
 app.post('/addtocart',fetchUser,async (req,res)=>{
     console.log("Added",req.body.itemId);
     let userData = await Users.findOne({_id:req.user.id});
@@ -243,6 +251,7 @@ app.post('/addtocart',fetchUser,async (req,res)=>{
 })
 
 // creating endpoint to remove product from cartdata
+
 app.post('/removefromcart',fetchUser,async (req,res)=>{
     console.log("removed",req.body.itemId);
     let userData = await Users.findOne({_id:req.user.id});
@@ -254,6 +263,7 @@ app.post('/removefromcart',fetchUser,async (req,res)=>{
 })
 
 //creating endpoint to get cartdata
+
 app.post('/getcart',fetchUser,async (req,res)=>{
     console.log("GetCart");
     let userData = await Users.findOne({_id:req.user.id});

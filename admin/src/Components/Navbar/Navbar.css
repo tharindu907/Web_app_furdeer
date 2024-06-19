@@ -5,7 +5,17 @@
     padding: 15px 60px;
     box-shadow: 0 1px 3px -2px #000;
     margin-bottom: 1px;
-    background: white;
+    background: #80B9AD;
+}
+.nav-user{
+    display: flex;
+    flex-direction: row;
+}
+.navbar p{
+    padding: 0px 10px;
+    margin-bottom: 0px;
+    font-weight: 900;
+    color: black;
 }
 .nav-logo{
     width: 200px;
