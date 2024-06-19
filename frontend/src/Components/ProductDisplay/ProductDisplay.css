@@ -29,14 +29,6 @@
     font-size: 40px;
     font-weight: 700
 }
-.productdisplay-right-stars{
-    display: flex;
-    align-items: center;
-    margin-top: 13px;
-    gap: 5px;
-    color: #1c1c1c;
-    font-size: 16px;
-}
 .productdisplay-right-prices{
     display: flex;
     margin: 40px 0px;
@@ -110,10 +102,6 @@
     .productdisplay-right h1{
         font-size: 22px;
     }
-    .productdisplay-right-stars{
-        gap: 3px;
-        font-size: 13px;
-    }
     .productdisplay-right-prices{
         margin: 10px 0px;
         font-size: 18px;
@@ -155,9 +143,6 @@
     .productdisplay-right h1{
         font-size: 18px;
     }
-    .productdisplay-right-stars img{
-        width: 15px;
-    }
     .productdisplay-right-description{
         font-size: 12px;
     }
@@ -194,9 +179,6 @@
     }
     .productdisplay-right h1{
         font-size: 15px;
-    }
-    .productdisplay-right-stars img{
-        width: 12px;
     }
     .productdisplay-right-prices{
         margin: 8px 0px;

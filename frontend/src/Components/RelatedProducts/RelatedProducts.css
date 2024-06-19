@@ -7,15 +7,16 @@
     /*height: 90vh;*/
 }
 .relatedproducts h1{
-    color: #171717;
+    color: #928B8B;
+    margin-top: 30px;
     font-size: 50px;
-    font-weight: 600;
+    font-weight: 200;
 }
 .relatedproducts hr{
+    margin-top: -10px;
     width: 200px;
-    height: 6px;
-    border-radius: 10px;
-    background: #252525;
+    height: 1px;
+    background: #928B8B;
 }
 .relatedproducts-item{
     margin-top: 50px;
