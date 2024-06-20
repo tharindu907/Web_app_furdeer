@@ -10,7 +10,8 @@ const cors = require("cors");
 app.use(express.json());
 app.use(cors());
 
-// Database Connection with MongoDB
+// MongoDB Connection
+
 mongoose.connect("mongodb+srv://tharindudev:19731963@cluster0.lryq5ms.mongodb.net/furdeer")
 
 // API Creation
@@ -30,7 +31,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({storage:storage})
 
-// Creating Upload Endpoint for images
+// Endpoint for Upload images
 
 app.use('/images',express.static('upload/images'))
 
@@ -107,7 +108,7 @@ app.post('/addproduct',async (req,res)=>{
     })
 })
 
-// Creating API for deleting Products
+// API for delete Products
 
 app.post('/removeproduct',async (req,res)=>{
     await Product.findOneAndDelete({id:req.body.id});
@@ -118,7 +119,7 @@ app.post('/removeproduct',async (req,res)=>{
     })
 })
 
-// Creating API for getting all products
+// API for get all products
 
 app.get('/allproducts',async (req,res)=>{
     let products = await Product.find({});
@@ -148,7 +149,7 @@ const Users = mongoose.model('Users',{
     }
 })
 
-// Creating Endpoint for Registering the User
+// Endpoint for Register the User
 
 app.post('/signup',async(req,res)=>{
 
@@ -180,7 +181,7 @@ app.post('/signup',async(req,res)=>{
 
 })
 
-// Creating Endpoint for User Login
+// Endpoint for User Login
 
 app.post('/login',async (req,res)=>{
     let user = await Users.findOne({email:req.body.email});
@@ -204,7 +205,7 @@ app.post('/login',async (req,res)=>{
     }
 })
 
-// Creating endpoint for newcollection data
+// Endpoint for newcollection data
 
 app.get('/newcollections',async (req,res)=>{
     let products = await Product.find({});
@@ -213,7 +214,7 @@ app.get('/newcollections',async (req,res)=>{
     res.send(newcollection);
 })
 
-// Creating endpoint for popular section
+// Endpoint for popular section
 
 app.get('/popularinwomen',async (req,res)=>{
     let products = await Product.find({category:"womens"});
@@ -222,7 +223,7 @@ app.get('/popularinwomen',async (req,res)=>{
     res.send(popular_in_women);
 })
 
-// creating middleware to fetch user
+// Middleware to fetch user
 
     const fetchUser = async (req,res,next)=>{
         const token = req.header('auth-token');
@@ -240,7 +241,7 @@ app.get('/popularinwomen',async (req,res)=>{
         }
     }
 
-//creating endpoint for adding prodcuts in cartdata
+// Endpoint for add prodcuts in cartdata
 
 app.post('/addtocart',fetchUser,async (req,res)=>{
     console.log("Added",req.body.itemId);
@@ -250,7 +251,7 @@ app.post('/addtocart',fetchUser,async (req,res)=>{
     res.send("Added")
 })
 
-// creating endpoint to remove product from cartdata
+// Endpoint to remove product from cartdata
 
 app.post('/removefromcart',fetchUser,async (req,res)=>{
     console.log("removed",req.body.itemId);
@@ -262,7 +263,7 @@ app.post('/removefromcart',fetchUser,async (req,res)=>{
 
 })
 
-//creating endpoint to get cartdata
+// Endpoint to get cartdata
 
 app.post('/getcart',fetchUser,async (req,res)=>{
     console.log("GetCart");
