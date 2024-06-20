@@ -10,12 +10,6 @@
     justify-content: space-between;
     align-items: center;
 }
-.shopcategory-sort{
-    padding: 10px 20px;
-    border-radius: 15px;
-    margin-right: 50px;
-    border: 1px solid #888;
-}
 .shopcategory-indexSort p span{
     font-weight: 600;
 }
@@ -49,11 +43,6 @@
     .shopcategory-indexSort{
         width: 90%;
         margin: auto;
-    }
-    .shopcategory-sort{
-        padding: 5px 10px;
-        font-size: 12px;
-        border-radius: 12px;
     }
     .shopcategory-indexSort p{
         font-size: 12px;
